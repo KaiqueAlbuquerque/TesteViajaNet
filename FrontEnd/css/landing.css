@@ -1,0 +1,41 @@
+body{
+    background-image: url("../images/promocao.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 20px;
+}
+
+#toast-container {
+    top: auto !important;
+    right: auto !important;
+    bottom: 10%;
+    left:40%;
+    opacity: .9;  
+}
+
+#divTextoPromocao{
+    height:300px; 
+    width:550px; 
+    margin-top: 5px; 
+    margin-left: -40px;
+}
+
+#tituloTextoPromocao{
+    font-size: 45px; 
+    font-weight: bold; 
+    color: #072F69;
+}
+
+#corpoTextoPromocao{
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #072F69;
+}
+
+#divEmail{
+    height:180px; 
+    width:300px; 
+    border-radius:20px; 
+    margin-top: 250px; 
+    background-color: rgba(10,23,55,0.6);
+}

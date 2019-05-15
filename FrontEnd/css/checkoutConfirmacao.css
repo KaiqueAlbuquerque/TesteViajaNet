@@ -1,0 +1,72 @@
+body{
+    background-color: #90caf9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 20px;
+}
+
+input:not([type]):disabled+label, input:not([type])[readonly="readonly"]+label, input[type=text]:not(.browser-default):disabled+label, input[type=text]:not(.browser-default)[readonly="readonly"]+label, input[type=password]:not(.browser-default):disabled+label, input[type=password]:not(.browser-default)[readonly="readonly"]+label, input[type=email]:not(.browser-default):disabled+label, input[type=email]:not(.browser-default)[readonly="readonly"]+label, input[type=url]:not(.browser-default):disabled+label, input[type=url]:not(.browser-default)[readonly="readonly"]+label, input[type=time]:not(.browser-default):disabled+label, input[type=time]:not(.browser-default)[readonly="readonly"]+label, input[type=date]:not(.browser-default):disabled+label, input[type=date]:not(.browser-default)[readonly="readonly"]+label, input[type=datetime]:not(.browser-default):disabled+label, input[type=datetime]:not(.browser-default)[readonly="readonly"]+label, input[type=datetime-local]:not(.browser-default):disabled+label, input[type=datetime-local]:not(.browser-default)[readonly="readonly"]+label, input[type=tel]:not(.browser-default):disabled+label, input[type=tel]:not(.browser-default)[readonly="readonly"]+label, input[type=number]:not(.browser-default):disabled+label, input[type=number]:not(.browser-default)[readonly="readonly"]+label, input[type=search]:not(.browser-default):disabled+label, input[type=search]:not(.browser-default)[readonly="readonly"]+label, textarea.materialize-textarea:disabled+label, textarea.materialize-textarea[readonly="readonly"]+label {
+    color: black;
+}
+
+input:not([type]):disabled, input:not([type])[readonly="readonly"], input[type=text]:not(.browser-default):disabled, input[type=text]:not(.browser-default)[readonly="readonly"], input[type=password]:not(.browser-default):disabled, input[type=password]:not(.browser-default)[readonly="readonly"], input[type=email]:not(.browser-default):disabled, input[type=email]:not(.browser-default)[readonly="readonly"], input[type=url]:not(.browser-default):disabled, input[type=url]:not(.browser-default)[readonly="readonly"], input[type=time]:not(.browser-default):disabled, input[type=time]:not(.browser-default)[readonly="readonly"], input[type=date]:not(.browser-default):disabled, input[type=date]:not(.browser-default)[readonly="readonly"], input[type=datetime]:not(.browser-default):disabled, input[type=datetime]:not(.browser-default)[readonly="readonly"], input[type=datetime-local]:not(.browser-default):disabled, input[type=datetime-local]:not(.browser-default)[readonly="readonly"], input[type=tel]:not(.browser-default):disabled, input[type=tel]:not(.browser-default)[readonly="readonly"], input[type=number]:not(.browser-default):disabled, input[type=number]:not(.browser-default)[readonly="readonly"], input[type=search]:not(.browser-default):disabled, input[type=search]:not(.browser-default)[readonly="readonly"], textarea.materialize-textarea:disabled, textarea.materialize-textarea[readonly="readonly"] {
+    color: black;
+}
+
+.input-field>label{
+    color: black;
+}
+
+#toast-container {
+    top: auto !important;
+    right: auto !important;
+    bottom: 10%;
+    left:45%;  
+}
+
+.divDadosCima{
+    height:450px; 
+    margin-top:-30px; 
+    border-radius:20px;
+}
+
+#divDadosEndereco{
+    height:450px; 
+    margin-top:-45px; 
+    border-radius:20px;
+}
+
+#divDadosPagamento{
+    height:495px; 
+    margin-top:-92px; 
+    border-radius:20px;
+}
+
+.divBtnProximo{
+    margin-top: 35px;
+}
+
+#imagensViagem{
+    margin-top: 50px;
+}
+
+#dadosViagem{
+    margin-top: -30px;
+}
+
+.titulo{
+    font-size: 40px; 
+    font-weight: bold; 
+    color: #072F69;
+}
+
+#tituloDadosPagamento{
+    font-size: 40px; 
+    font-weight: bold; 
+    color: #072F69; 
+    padding-top: 50px;
+}
+
+#tituloDadosViagem{
+    font-size: 20px;
+}

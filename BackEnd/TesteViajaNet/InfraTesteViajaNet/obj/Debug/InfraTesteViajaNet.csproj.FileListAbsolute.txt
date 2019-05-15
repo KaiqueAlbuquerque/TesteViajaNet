@@ -1,0 +1,14 @@
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\obj\Debug\InfraTesteViajaNet.csprojAssemblyReference.cache
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\obj\Debug\InfraTesteViajaNet.csproj.CoreCompileInputs.cache
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\bin\Debug\InfraTesteViajaNet.dll.config
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\bin\Debug\InfraTesteViajaNet.dll
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\bin\Debug\InfraTesteViajaNet.pdb
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\bin\Debug\DominioTesteViajaNet.dll
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\bin\Debug\EntityFramework.dll
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\bin\Debug\DominioTesteViajaNet.pdb
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\bin\Debug\EntityFramework.xml
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\obj\Debug\InfraTesteViajaNet.csproj.CopyComplete
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\obj\Debug\InfraTesteViajaNet.dll
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\InfraTesteViajaNet\obj\Debug\InfraTesteViajaNet.pdb

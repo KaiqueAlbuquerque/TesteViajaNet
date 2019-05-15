@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TesteViajaNetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="ClienteId" />
+    </Key>
+    <Property Name="ClienteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="DataNascimento" Type="datetime" Nullable="false" />
+    <Property Name="Cpf" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Rg" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="Telefone" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+    <Property Name="Ip" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DadosNavegacao">
+    <Key>
+      <PropertyRef Name="DadosNavegacaoId" />
+    </Key>
+    <Property Name="DadosNavegacaoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ip" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NomeDaPagina" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Browser" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DadosPagamento">
+    <Key>
+      <PropertyRef Name="DadosPagamentoId" />
+    </Key>
+    <Property Name="DadosPagamentoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeroCartao" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="Cvv" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NomeImpressoNoCartao" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Validade" Type="datetime" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+    <Property Name="ClienteId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="EnderecoId" />
+    </Key>
+    <Property Name="EnderecoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Logradouro" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="Complemento" Type="varchar" MaxLength="100" />
+    <Property Name="Bairro" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Cidade" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ClienteId" Type="int" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Landing">
+    <Key>
+      <PropertyRef Name="LandingId" />
+    </Key>
+    <Property Name="LandingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Ip" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dbo_DadosPagamento_dbo_Cliente_ClienteId">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="DadosPagamento" Type="Self.DadosPagamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteId" />
+      </Principal>
+      <Dependent Role="DadosPagamento">
+        <PropertyRef Name="ClienteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Endereco_dbo_Cliente_ClienteId">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteId" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="ClienteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TesteViajaNetModelStoreContainer">
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DadosNavegacao" EntityType="Self.DadosNavegacao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DadosPagamento" EntityType="Self.DadosPagamento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Endereco" EntityType="Self.Endereco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Landing" EntityType="Self.Landing" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_DadosPagamento_dbo_Cliente_ClienteId" Association="Self.FK_dbo_DadosPagamento_dbo_Cliente_ClienteId">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="DadosPagamento" EntitySet="DadosPagamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Endereco_dbo_Cliente_ClienteId" Association="Self.FK_dbo_Endereco_dbo_Cliente_ClienteId">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TesteViajaNetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="ClienteId" />
+    </Key>
+    <Property Name="ClienteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataNascimento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Cpf" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Rg" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Ip" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="DadosPagamento" Relationship="Self.FK_dbo_DadosPagamento_dbo_Cliente_ClienteId" FromRole="Cliente" ToRole="DadosPagamento" />
+    <NavigationProperty Name="Endereco" Relationship="Self.FK_dbo_Endereco_dbo_Cliente_ClienteId" FromRole="Cliente" ToRole="Endereco" />
+  </EntityType>
+  <EntityType Name="DadosNavegacao">
+    <Key>
+      <PropertyRef Name="DadosNavegacaoId" />
+    </Key>
+    <Property Name="DadosNavegacaoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ip" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NomeDaPagina" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Browser" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="DadosPagamento">
+    <Key>
+      <PropertyRef Name="DadosPagamentoId" />
+    </Key>
+    <Property Name="DadosPagamentoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumeroCartao" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cvv" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NomeImpressoNoCartao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Validade" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ClienteId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_dbo_DadosPagamento_dbo_Cliente_ClienteId" FromRole="DadosPagamento" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="EnderecoId" />
+    </Key>
+    <Property Name="EnderecoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Logradouro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="Complemento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Bairro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClienteId" Type="Int32" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_dbo_Endereco_dbo_Cliente_ClienteId" FromRole="Endereco" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Landing">
+    <Key>
+      <PropertyRef Name="LandingId" />
+    </Key>
+    <Property Name="LandingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ip" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="FK_dbo_DadosPagamento_dbo_Cliente_ClienteId">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="DadosPagamento" Type="Self.DadosPagamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteId" />
+      </Principal>
+      <Dependent Role="DadosPagamento">
+        <PropertyRef Name="ClienteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Endereco_dbo_Cliente_ClienteId">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteId" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="ClienteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TesteViajaNetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="DadosNavegacao" EntityType="Self.DadosNavegacao" />
+    <EntitySet Name="DadosPagamento" EntityType="Self.DadosPagamento" />
+    <EntitySet Name="Endereco" EntityType="Self.Endereco" />
+    <EntitySet Name="Landing" EntityType="Self.Landing" />
+    <AssociationSet Name="FK_dbo_DadosPagamento_dbo_Cliente_ClienteId" Association="Self.FK_dbo_DadosPagamento_dbo_Cliente_ClienteId">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="DadosPagamento" EntitySet="DadosPagamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Endereco_dbo_Cliente_ClienteId" Association="Self.FK_dbo_Endereco_dbo_Cliente_ClienteId">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

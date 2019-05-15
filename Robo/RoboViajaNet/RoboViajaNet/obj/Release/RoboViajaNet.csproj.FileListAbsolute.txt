@@ -1,0 +1,14 @@
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\bin\Release\RoboViajaNet.exe.config
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\bin\Release\RoboViajaNet.exe
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\bin\Release\RoboViajaNet.pdb
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\bin\Release\EntityFramework.dll
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\bin\Release\EntityFramework.xml
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\obj\Release\RoboViajaNet.csprojAssemblyReference.cache
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\obj\Release\RoboViajaNet.ProjectInstaller.resources
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\obj\Release\RoboViajaNet.csproj.GenerateResource.cache
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\obj\Release\RoboViajaNet.csproj.CoreCompileInputs.cache
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\obj\Release\RoboViajaNet.csproj.CopyComplete
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\obj\Release\RoboViajaNet.exe
+C:\Users\kaiqu\Desktop\viajanet\Robo\RoboViajaNet\RoboViajaNet\obj\Release\RoboViajaNet.pdb

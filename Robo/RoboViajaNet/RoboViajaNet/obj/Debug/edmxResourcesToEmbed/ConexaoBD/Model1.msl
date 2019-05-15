@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TesteViajaNetModelStoreContainer" CdmEntityContainer="TesteViajaNetEntities">
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="TesteViajaNetModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+          <ScalarProperty Name="Rg" ColumnName="Rg" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DadosNavegacao">
+      <EntityTypeMapping TypeName="TesteViajaNetModel.DadosNavegacao">
+        <MappingFragment StoreEntitySet="DadosNavegacao">
+          <ScalarProperty Name="DadosNavegacaoId" ColumnName="DadosNavegacaoId" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="NomeDaPagina" ColumnName="NomeDaPagina" />
+          <ScalarProperty Name="Browser" ColumnName="Browser" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DadosPagamento">
+      <EntityTypeMapping TypeName="TesteViajaNetModel.DadosPagamento">
+        <MappingFragment StoreEntitySet="DadosPagamento">
+          <ScalarProperty Name="DadosPagamentoId" ColumnName="DadosPagamentoId" />
+          <ScalarProperty Name="NumeroCartao" ColumnName="NumeroCartao" />
+          <ScalarProperty Name="Cvv" ColumnName="Cvv" />
+          <ScalarProperty Name="NomeImpressoNoCartao" ColumnName="NomeImpressoNoCartao" />
+          <ScalarProperty Name="Validade" ColumnName="Validade" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Endereco">
+      <EntityTypeMapping TypeName="TesteViajaNetModel.Endereco">
+        <MappingFragment StoreEntitySet="Endereco">
+          <ScalarProperty Name="EnderecoId" ColumnName="EnderecoId" />
+          <ScalarProperty Name="Logradouro" ColumnName="Logradouro" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Landing">
+      <EntityTypeMapping TypeName="TesteViajaNetModel.Landing">
+        <MappingFragment StoreEntitySet="Landing">
+          <ScalarProperty Name="LandingId" ColumnName="LandingId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>Confirmação Pedido</title>
+        
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/checkoutConfirmacao.css">
+    </head>
+    <body>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper white">
+                    <a href="home.html"><img id="logotipo" class="brand-logo" src="images/logo.svg" alt="logo" width="120" height="60"></a>                 
+                    <ul id="nav-mobile" class="letf hide-on-med-and-down">
+                        <li><a href="home.html" class="black-text">Inicio</a></li>
+                        <li><a href="landing.html" class="black-text">Promoções</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="col s7">
+                <div class="grey lighten-3 center divDadosCima">
+                    <p class="titulo">Dados Pessoais</p>
+
+                    <div class="row">
+                        <div class="input-field offset-s1 col s7">
+                            <input placeholder="Nome" id="nome" type="text" class="validate" disabled>
+                            <label for="nome">Nome Completo</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input placeholder="Data de Nascimento" id="nascimento" type="text" class="validate" disabled>
+                            <label for="nascimento">Data de Nascimento</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field offset-s1 col s5">
+                            <input placeholder="CPF" id="cpf" type="text" class="validate" disabled>
+                            <label for="cpf">CPF</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input placeholder="RG" id="rg" type="text" class="validate" disabled>
+                            <label for="rg">RG</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field offset-s1 col s5">
+                            <input placeholder="Telefone" id="telefone" type="text" class="validate" disabled>
+                            <label for="telefone">Telefone</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input placeholder="E-mail" id="email" type="text" class="validate" disabled>
+                            <label for="email">E-mail</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s5">
+                <div class="grey lighten-3 divDadosCima">
+                    <p class="center titulo">Produto</p>
+
+                    <div class="row">
+                        <div class="offset-s1 col s5 center" id="imagensViagem">
+                            <img src="images/viagem.jpg" alt="viagem" width="193" height="130" />
+                            <img src="images/ibis.jpg" alt="viagem" width="193" height="130" />
+                        </div>
+                        <div class="col s5" id="dadosViagem">
+                            <p class="center" id="tituloDadosViagem"><b>Pacote de Viagem</b></p>
+                            <p><b>Origem:</b> Guarulhos/ São Paulo</p>
+                            <p><b>Destino:</b> Paris/ França</p>
+                            <p><b>Companhia:</b> LATAM</p>
+                            <p><b>Data Saída:</b> 25/08/2019</p>
+                            <p><b>Horário:</b> 19h00</p>
+                            <p><b>Data Chegada:</b> 26/08/2019</p>
+                            <p><b>Horário:</b> 13h00</p>
+                            <p><b>Hotel:</b> Ibis Hotel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s7">
+                <div class="grey lighten-3 center" id="divDadosEndereco">
+                    <p class="titulo">Endereço</p>
+
+                    <div class="row">
+                        <div class="input-field offset-s1 col s8">
+                            <input placeholder="Logradouro" id="logradouro" type="text" class="validate" disabled>
+                            <label for="logradouro">Logradouro</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <input placeholder="Número" id="numero" type="number" class="validate" disabled>
+                            <label for="numero">Número</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field offset-s1 col s5">
+                            <input placeholder="Complemento" id="complemento" type="text" class="validate" disabled>
+                            <label for="complemento">Complemento</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input placeholder="Bairro" id="bairro" type="text" class="validate" disabled>
+                            <label for="bairro">Bairro</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field offset-s1 col s5">
+                            <input placeholder="Cidade" id="cidade" type="text" class="validate" disabled>
+                            <label for="cidade">Cidade</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input placeholder="Estado" id="estado" type="text" class="validate" disabled>
+                            <label for="estado">Estado</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s5">
+                <div class="grey lighten-3 center" id="divDadosPagamento">
+                    <p id="tituloDadosPagamento">Dados Pagamento</p>
+                    
+                    <div class="row">
+                        <div class="input-field offset-s1 col s8">
+                            <input placeholder="Número do Cartão" id="numeroCartao" type="text" class="validate" disabled>
+                            <label for="numeroCartao">Número cartão</label>
+                        </div>
+                        <div class="input-field col s2">
+                            <input placeholder="CVV" id="cvv" type="text" class="validate" disabled>
+                            <label for="cvv">CVV</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field offset-s1 col s5">
+                            <input placeholder="Nome impresso no cartão" id="nomeCartao" type="text" class="validate" disabled>
+                            <label for="nomeCartao">Nome impresso no cartão</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input placeholder="Validade" id="validade" type="text" class="validate" disabled>
+                            <label for="validade">Validade</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-s5 col s1 divBtnProximo">
+                            <a id="voltar" class="waves-effect waves-light btn teal darken-1 btn-large white-text">Voltar</a>
+                        </div>
+                        <div class="offset-s2 col s3 divBtnProximo">
+                            <a id="comprar" class="waves-effect waves-light btn orange darken-1 btn-large white-text">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Compra Realizada</h4>
+                <p>Compra realizada com sucesso. Em breve você receberá um e-mail com maiores detalhes.</p>
+            </div>
+            <div class="modal-footer">
+                <a id="fechar" href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/dadosNavegacao.js"></script> 
+        <script type="text/javascript" src="js/confirmacao.js"></script>
+    </body>
+</html>

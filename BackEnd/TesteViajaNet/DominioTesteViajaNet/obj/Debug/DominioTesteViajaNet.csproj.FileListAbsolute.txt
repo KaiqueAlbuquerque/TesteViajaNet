@@ -1,0 +1,6 @@
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\DominioTesteViajaNet\bin\Debug\DominioTesteViajaNet.dll
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\DominioTesteViajaNet\bin\Debug\DominioTesteViajaNet.pdb
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\DominioTesteViajaNet\obj\Debug\DominioTesteViajaNet.csproj.CoreCompileInputs.cache
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\DominioTesteViajaNet\obj\Debug\DominioTesteViajaNet.dll
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\DominioTesteViajaNet\obj\Debug\DominioTesteViajaNet.pdb
+C:\Users\kaiqu\Desktop\viajanet\BackEnd\TesteViajaNet\DominioTesteViajaNet\obj\Debug\DominioTesteViajaNet.csprojAssemblyReference.cache

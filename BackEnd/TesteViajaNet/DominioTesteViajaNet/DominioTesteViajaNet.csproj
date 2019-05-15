@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B1E5E3C-3674-4076-BED7-D795B41683CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DominioTesteViajaNet</RootNamespace>
+    <AssemblyName>DominioTesteViajaNet</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\DadosNavegacao.cs" />
+    <Compile Include="Entidades\DadosPagamento.cs" />
+    <Compile Include="Entidades\Endereco.cs" />
+    <Compile Include="Entidades\Landing.cs" />
+    <Compile Include="Interfaces\Repositorios\IBaseRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IClienteRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IDadosNavegacaoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IDadosPagamentoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IEnderecoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\ILandingRepositorio.cs" />
+    <Compile Include="Interfaces\Servicos\IBaseServico.cs" />
+    <Compile Include="Interfaces\Servicos\IClienteServico.cs" />
+    <Compile Include="Interfaces\Servicos\IDadosNavegacaoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IDadosPagamentoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IEnderecoServico.cs" />
+    <Compile Include="Interfaces\Servicos\ILandingServico.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\BaseServico.cs" />
+    <Compile Include="Servicos\ClienteServico.cs" />
+    <Compile Include="Servicos\DadosNavegacaoServico.cs" />
+    <Compile Include="Servicos\DadosPagamentoServico.cs" />
+    <Compile Include="Servicos\EnderecoServico.cs" />
+    <Compile Include="Servicos\LandingServico.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
